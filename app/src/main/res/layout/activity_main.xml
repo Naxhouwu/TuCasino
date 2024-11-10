@@ -4,49 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#a20b1b"
+    android:background="#F5F5F5"
     tools:context=".MainActivity">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="8dp"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="12dp"
         app:cardElevation="4dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="835dp"
-            android:background="#ffffff"
+            android:layout_height="890dp"
+            android:background="#FFFFFF"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="20dp">
 
-            <!-- Tarjeta del Menú 1 -->
             <TextView
                 android:id="@+id/titleText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
-                android:fontFamily="arial"
+                android:layout_marginBottom="28dp"
+                android:fontFamily="@font/roboto_medium"
                 android:text="TuCasino"
                 android:textAlignment="center"
-                android:textSize="28sp"
-                android:textColor="@color/black"
+                android:textColor="#1A237E"
+                android:textSize="32sp"
                 android:textStyle="bold" />
 
+            <!-- Tarjeta del Menú 1 -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/menuCard1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="2dp">
+                app:cardCornerRadius="12dp"
+                app:cardElevation="3dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#a20b1b"
+                    android:background="#3949AB"
                     android:orientation="horizontal"
-                    android:padding="8dp">
+                    android:padding="12dp">
 
                     <ImageView
                         android:id="@+id/imageView1"
@@ -58,11 +59,11 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:fontFamily="arial"
+                        android:layout_marginStart="12dp"
+                        android:fontFamily="@font/roboto"
                         android:text="Lasaña Boloñesa Tradicional lasaña italiana con capas de pasta, carne picada, salsa de tomate, zanahorias, cebolla y un toque de vino tinto, cubierto con salsa bechamel cremosa y queso rallado. Ideal para disfrutar con amigos. Alergenos: Gluten, Lácteos, Huevo."
-                        android:textColor="@color/white"
-                        android:textSize="12sp" />
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -72,15 +73,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="2dp">
+                app:cardCornerRadius="12dp"
+                app:cardElevation="3dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#ffffff"
+                    android:background="#FFFFFF"
                     android:orientation="horizontal"
-                    android:padding="8dp">
+                    android:padding="12dp">
 
                     <ImageView
                         android:id="@+id/imageView2"
@@ -92,11 +93,11 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:fontFamily="casual"
+                        android:layout_marginStart="12dp"
+                        android:fontFamily="@font/roboto"
                         android:text="Lentejas con Chorizo Plato tradicional de lentejas guisadas con chorizo, cebolla, zanahoria, pimiento, tomate y un toque de especias, cocinadas a fuego lento para un sabor casero y reconfortante. Alergenos: Gluten."
-                        android:textColor="@color/black"
-                        android:textSize="12sp" />
+                        android:textColor="#263238"
+                        android:textSize="14sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -106,15 +107,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="2dp">
+                app:cardCornerRadius="12dp"
+                app:cardElevation="3dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#a20b1b"
+                    android:background="#3949AB"
                     android:orientation="horizontal"
-                    android:padding="8dp">
+                    android:padding="12dp">
 
                     <ImageView
                         android:id="@+id/imageView3"
@@ -126,43 +127,45 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:fontFamily="casual"
+                        android:layout_marginStart="12dp"
+                        android:fontFamily="@font/roboto"
                         android:text="Pechuga de pollo a la plancha acompañada de arroz blanco, sazonado con hierbas y especias, para una opción ligera y sabrosa. Ideal para una comida equilibrada y saludable."
-                        android:textColor="@color/black"
-                        android:textSize="12sp" />
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Campo de entrada del número de boleta -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/numeroBoletaLayout"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:hint="Ingrese n° de boleta">
+                android:layout_marginBottom="20dp"
+                android:hint="Ingrese n° de boleta"
+                app:boxStrokeColor="#3949AB"
+                app:hintTextColor="#3949AB">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/numeroBoletaInput"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:textColor="#263238" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Botón de valorar -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/botonValorar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#a20b1b"
-                android:padding="12dp"
+                android:backgroundTint="#3949AB"
+                android:padding="14dp"
                 android:text="Valorar"
                 android:textAllCaps="false"
-                android:textColor="#ffffff"
+                android:textColor="#FFFFFF"
                 android:textSize="16sp"
-                app:cornerRadius="8dp" />
+                android:fontFamily="@font/roboto_medium"
+                app:cornerRadius="12dp" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
