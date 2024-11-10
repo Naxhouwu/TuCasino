@@ -32,7 +32,8 @@ android {
 }
 
 dependencies {
-
+    implementation(libs.material)
+    implementation(libs.cardview)
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)

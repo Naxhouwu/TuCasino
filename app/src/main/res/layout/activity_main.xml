@@ -1,129 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
-    tools:context=".MainActivity"
-    tools:layout_editor_absoluteX="0dp"
-    tools:layout_editor_absoluteY="-62dp">
+    android:background="#a20b1b"
+    tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="185dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="casual"
-        android:text="Menu Casino"
-        android:textAlignment="center"
-        android:textSize="28sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="190dp"
-        android:layout_height="110dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="16dp"
-        android:background="#690715"
-        android:fontFamily="casual"
-        android:text="Lasaña Boloñesa Tradicional lasaña italiana con capas de pasta, carne picada, salsa de tomate, zanahorias, cebolla y un toque de vino tinto, cubierto con salsa bechamel cremosa y queso rallado. Ideal para disfrutar con amigos. Alergenos: Gluten, Lácteos, Huevo (puede contener trazas de soja, apio y zanahorias)."
-        android:textColor="#ffffff"
-        android:textSize="10sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="190dp"
-        android:layout_height="110dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        android:background="#690715"
-        android:fontFamily="casual"
-        android:text="Pechuga de pollo a la plancha acompañada de arroz blanco, sazonado con hierbas y especias, para una opción ligera y sabrosa. Ideal para una comida equilibrada y saludable."
-        android:textColor="#ffffff"
-        android:textSize="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="190dp"
-        android:layout_height="110dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="16dp"
-        android:background="#690715"
-        android:fontFamily="casual"
-        android:text="Lentejas con Chorizo Plato tradicional de lentejas guisadas con chorizo, cebolla, zanahoria, pimiento, tomate y un toque de especias, cocinadas a fuego lento para un sabor casero y reconfortante. Alergenos: Gluten (en el chorizo y algunos condimentos)."
-        android:textColor="#ffffff"
-        android:textSize="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <EditText
-        android:id="@+id/numeroBoletaEditText"
-        android:layout_width="wrap_content"
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:ems="10"
-        android:hint="Ingrese n° de boleta"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="130dp"
-        android:layout_height="90dp"
-        android:layout_marginTop="52dp"
-        app:layout_constraintEnd_toStartOf="@+id/textView4"
-        app:layout_constraintHorizontal_bias="0.28"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:srcCompat="@drawable/pollo" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="835dp"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-    <Button
-        android:id="@+id/botonValorar"
-        android:layout_width="110dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="32dp"
-        android:backgroundTint="#a20b1b"
-        android:onClick="irValorar"
-        android:text="Valorar"
-        android:textColor="#ffffff"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numeroBoletaEditText" />
+            <!-- Tarjeta del Menú 1 -->
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="arial"
+                android:text="TuCasino"
+                android:textAlignment="center"
+                android:textSize="28sp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="130dp"
-        android:layout_height="90dp"
-        android:layout_marginTop="44dp"
-        app:layout_constraintEnd_toStartOf="@+id/textView2"
-        app:layout_constraintHorizontal_bias="0.275"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="@drawable/lasagna" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/menuCard1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="130dp"
-        android:layout_height="90dp"
-        android:layout_marginTop="60dp"
-        app:layout_constraintEnd_toStartOf="@+id/textView3"
-        app:layout_constraintHorizontal_bias="0.28"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:srcCompat="@drawable/lentejas" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#a20b1b"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="130dp"
+                        android:layout_height="90dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/lasagna" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="arial"
+                        android:text="Lasaña Boloñesa Tradicional lasaña italiana con capas de pasta, carne picada, salsa de tomate, zanahorias, cebolla y un toque de vino tinto, cubierto con salsa bechamel cremosa y queso rallado. Ideal para disfrutar con amigos. Alergenos: Gluten, Lácteos, Huevo."
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Tarjeta del Menú 2 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/menuCard2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="130dp"
+                        android:layout_height="90dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/lentejas" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="casual"
+                        android:text="Lentejas con Chorizo Plato tradicional de lentejas guisadas con chorizo, cebolla, zanahoria, pimiento, tomate y un toque de especias, cocinadas a fuego lento para un sabor casero y reconfortante. Alergenos: Gluten."
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Tarjeta del Menú 3 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/menuCard3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#a20b1b"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="130dp"
+                        android:layout_height="90dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/pollo" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="casual"
+                        android:text="Pechuga de pollo a la plancha acompañada de arroz blanco, sazonado con hierbas y especias, para una opción ligera y sabrosa. Ideal para una comida equilibrada y saludable."
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Campo de entrada del número de boleta -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/numeroBoletaLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="Ingrese n° de boleta">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/numeroBoletaInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Botón de valorar -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/botonValorar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#a20b1b"
+                android:padding="12dp"
+                android:text="Valorar"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                app:cornerRadius="8dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</ScrollView>
