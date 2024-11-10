@@ -2,6 +2,7 @@ package com.example.menucasino;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,6 +32,14 @@ public class MainActivity extends AppCompatActivity {
         setupListeners();
     }
 
+    protected void onResume() {
+        super.onResume();
+        // Asegurar que el EditText no tome el foco al volver a la actividad
+        View rootView = findViewById(android.R.id.content);
+        rootView.setFocusableInTouchMode(true);
+        rootView.requestFocus();
+    }
+
     private void initViews() {
         numeroBoletaLayout = findViewById(R.id.numeroBoletaLayout);
         numeroBoletaInput = findViewById(R.id.numeroBoletaInput);
@@ -54,6 +63,9 @@ public class MainActivity extends AppCompatActivity {
 
         // Limpiar error si existe
         numeroBoletaLayout.setError(null);
+
+        // Limpiar el campo de texto
+        numeroBoletaInput.setText("");
 
         // Mostrar mensaje de confirmación
         Toast.makeText(this, "Número de boleta: " + numeroBoleta, Toast.LENGTH_SHORT).show();

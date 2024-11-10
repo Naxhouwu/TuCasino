@@ -72,7 +72,7 @@ public class MainActivity2 extends AppCompatActivity {
         );
 
         if (validarValoraciones(valoracion)) {
-            Toast.makeText(this, "¡Gracias por tu valoración!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "¡Gracias por tu valoración!", Toast.LENGTH_SHORT).show();
             finish();
         }
     }
